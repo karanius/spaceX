@@ -9,13 +9,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
-import MenuIcon from "@material-ui/icons/Menu";
-import Container from "@material-ui/core/Container";
 import SearchIcon from "@material-ui/icons/Search";
 import {
   ListItem,
@@ -26,7 +22,7 @@ import {
   Avatar,
   Button,
 } from "@material-ui/core";
-import { TabPanel, TabContext } from "@material-ui/lab";
+import { TabContext } from "@material-ui/lab";
 import shuttleSVG from "./assets/Shuttle.svg";
 import HomeIcon from "@material-ui/icons/Home";
 import PeopleIcon from "@material-ui/icons/People";
@@ -59,32 +55,11 @@ const useStyles = makeStyles((theme) => ({
     boxShadow:
       "0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2)",
   },
-  // toolbarIcon: {
-  //   display: "flex",
-  //   alignItems: "center",
-  //   justifyContent: "flex-end",
-  //   padding: "0 8px",
-  //   ...theme.mixins.toolbar,
-  // },
-  // appBar: {
-  //   zIndex: theme.zIndex.drawer + 1,
-  //   transition: theme.transitions.create(["width", "margin"], {
-  //     easing: theme.transitions.easing.sharp,
-  //     duration: theme.transitions.duration.leavingScreen,
-  //   }),
-  // },
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
   },
-  // menuButton: {
-  //   marginRight: 36,
-  // },
-  // menuButtonHidden: {
-  //   display: "none",
-  // },
   title: {
-    // flexGrow: 1,
     height: "113px",
     display: "flex",
   },
@@ -109,7 +84,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     height: "100vh",
     overflow: "auto",
-    // position: "relative",
   },
   dashboard: {
     fontWeight: 500,
@@ -132,16 +106,6 @@ const useStyles = makeStyles((theme) => ({
   },
   indicator: {
     backgroundColor: "white",
-  },
-  // container: {
-  //   paddingTop: theme.spacing(4),
-  //   paddingBottom: theme.spacing(4),
-  // },
-  paper: {
-    // padding: theme.spacing(2),
-    // display: "flex",
-    // overflow: "auto",
-    // flexDirection: "column",
   },
   cardText: {
     position: "absolute",
