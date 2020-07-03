@@ -19,14 +19,13 @@ import {
   ListItemIcon,
   Tabs,
   Tab,
-  Avatar,
-  Button,
 } from "@material-ui/core";
 import { TabContext } from "@material-ui/lab";
 import shuttleSVG from "./assets/Shuttle.svg";
 import HomeIcon from "@material-ui/icons/Home";
 import PeopleIcon from "@material-ui/icons/People";
 import CreditCardIcon from "@material-ui/icons/CreditCard";
+import LinkList from "./component/LinkList";
 const svgContants = 1.3;
 
 function Copyright() {
@@ -177,7 +176,7 @@ export default function Dashboard() {
               style={{ backgroundColor: "white", opacity: 0.2 }}
             />
             <Grid container item className={classes.dashboardBottom}>
-              <TabContext>
+              <TabContext value="0">
                 <Tabs
                   value={0}
                   classes={{
@@ -251,84 +250,7 @@ export default function Dashboard() {
           <Grid item xs={12} md={8} lg={9}>
             <Typography className={classes.cardText}>Active Rockets</Typography>
             <Paper className={fixedHeightPaper}>
-              <div
-                style={{
-                  padding: "32px 32px 24px 32px",
-                  flex: 1,
-                }}
-              >
-                <Grid container direction="row">
-                  <Avatar
-                    className={classes.avatar}
-                    alt="Remy Sharp"
-                    src="/static/images/avatar/1.jpg"
-                  />
-                  <Grid container style={{ flex: 1 }}>
-                    <Grid container item>
-                      <Grid item>FALCON 1</Grid>
-                      <Divider
-                        style={{ backgroundColor: "#0B79D0" }}
-                        orientation="vertical"
-                      />
-                      <Grid item>FALCON 1</Grid>
-                    </Grid>
-                    <Grid container item>
-                      <Grid item></Grid>
-                    </Grid>
-                  </Grid>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    disableElevation
-                    className={classes.button}
-                  >
-                    MORE INFO
-                  </Button>
-                  <Divider style={{ top: "calc(50% - 0px/2 + 0.5px)" }} />
-                </Grid>
-              </div>
-              <Divider variant="middle" />
-              <div
-                style={{
-                  padding: "32px 32px 24px 32px",
-                  flex: 1,
-                }}
-              >
-                <Grid container direction="row">
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <div>description</div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    disableElevation
-                    className={classes.button}
-                  >
-                    MORE INFO
-                  </Button>
-                  <Divider style={{ top: "calc(50% - 0px/2 + 0.5px)" }} />
-                </Grid>
-              </div>
-              <Divider variant="middle" />
-              <div
-                style={{
-                  padding: "32px 32px 24px 32px",
-                  flex: 1,
-                }}
-              >
-                <Grid container direction="row">
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <div>description</div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    disableElevation
-                    className={classes.button}
-                  >
-                    MORE INFO
-                  </Button>
-                  <Divider style={{ top: "calc(50% - 0px/2 + 0.5px)" }} />
-                </Grid>
-              </div>
+              <LinkList />
             </Paper>
           </Grid>
         </Grid>
