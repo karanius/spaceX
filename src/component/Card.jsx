@@ -51,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Card = ({ data, index }) => {
   const [modalState, setModalState] = useState(false);
-  console.log(data);
   const { links, rocket, launch_site } = data;
   const imageLink = links.flickr_images[0];
   const site = launch_site.site_name_long;
@@ -146,7 +145,7 @@ const Card = ({ data, index }) => {
           <Grid container>
             <Grid item className={classes.leftSide} />
             <Grid item container className={classes.rightSide}>
-              <div className={classes.close}>
+              <div onClick={handleClose} className={classes.close}>
                 <span className={classes.x}>CLOSE</span>
                 <img alt="x" src={xSVG} />
               </div>
